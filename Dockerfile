@@ -31,8 +31,8 @@ RUN git config --global advice.detachedHead false \
     && OBS_NDI_LATEST_RELEASE=$(curl -s https://api.github.com/repos/Palakis/obs-ndi/releases/latest) \
     && echo "${OBS_NDI_LATEST_RELEASE}" | grep "https://github.com/Palakis/obs-ndi/releases/download/" | grep "libndi" | grep "_amd64.deb" | cut -d : -f 2,3 | tr -d "\"" | wget -O /tmp/libndi_amd64.deb -qi - \
     && echo "${OBS_NDI_LATEST_RELEASE}" | grep "https://github.com/Palakis/obs-ndi/releases/download/" | grep "obs-ndi_" | grep "_amd64.deb" | cut -d : -f 2,3 | tr -d "\"" | wget -O /tmp/obs-ndi_amd64.deb -qi - \
-    # && OBS_WEBSOCKET_LATEST_RELEASE=$(curl -s https://api.github.com/repos/Palakis/obs-websocket/releases/latest) \
-    # && echo "${OBS_WEBSOCKET_LATEST_RELEASE}" | grep "https://github.com/Palakis/obs-websocket/releases/download/" | grep "obs-websocket_" | grep "_amd64.deb" | cut -d : -f 2,3 | tr -d "\"" | wget -O /tmp/obs-websocket_amd64.deb -qi - \
+    && OBS_WEBSOCKET_LATEST_RELEASE=$(curl -s https://api.github.com/repos/Palakis/obs-websocket/releases/latest) \
+    && echo "${OBS_WEBSOCKET_LATEST_RELEASE}" | grep "https://github.com/Palakis/obs-websocket/releases/download/" | grep "obs-websocket" | grep "_amd64.deb" | cut -d : -f 2,3 | tr -d "\"" | wget -O /tmp/obs-websocket_amd64.deb -qi - \
 
     # install the plugins for NDI
     && dpkg -i /tmp/*.deb \
