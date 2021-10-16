@@ -9,6 +9,8 @@ TBD.
 
 
 ### Inspirations
+
 * [bb12489/gui-docker](https://github.com/bb12489/gui-docker)
 * [bb12489/docker-obs](https://github.com/bb12489/docker-obs)
-* [docker-obs-ndi](https://github.com/Daedilus/docker-obs-ndi)
+* [Daedilus/docker-obs-ndi](https://github.com/Daedilus/docker-obs-ndi)
+* [luigi311/docker-obs-ndi](https://github.com/luigi311/docker-obs-ndi)
