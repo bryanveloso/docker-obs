@@ -2,10 +2,10 @@ FROM ubuntu:20.04
 ARG DEBIAN_FRONTEND="noninteractive"
 
 # For the VNC connection
-EXPOSE 5900
+EXPOSE 5990
 
 # For the browser-based VNC client
-EXPOSE 5901
+EXPOSE 5991
 
 # Use an enviornment variable to allow custom VNC passwords
 ENV VNC_PASSWORD=123456
