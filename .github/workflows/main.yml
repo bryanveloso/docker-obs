@@ -1,10 +1,6 @@
 name: CI
 
-on:
-  push:
-    paths-ignore:
-      - .gitignore
-      - "*.md"
+on: [push, pull_request]
 
 jobs:
   docker:
